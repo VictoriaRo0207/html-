@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 태그</title>
+</head>
+<body>
+    <h1>목록 태그</h1>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <!-- bullet : 리스트 앞에 나오는 목록 표시  -->
+    <h2>Ordered List</h2>
+    <ol>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ol>
+    <h2>Definition List(정의목록)</h2>
+    <dl>
+        <dt>definition term(리스트제목이 들어가는 부분이라고 보면될 듯)</dt>
+        <dd>definition description(설명 또는 내용으로 보면 될듯)</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+        <dd>definition description</dd>
+    </dl>
+    <hr>
+    <!-- 리스트 사용의 잘못된 예 -->
+    <ul>
+        <h2>Unordered List</h2>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+    <!-- ul, ol, dl 리스트 태그의 자식 태그로 <li> 외에 다른 태그가 올 수 없다 -->
+    <h2>Ordered List</h2>
+    <ol>
+        <li>
+            <a href=""></a>
+            <img src="" alt="">
+        </li>
+    </ol>
+    <!-- li 태크 내부에 다른 태크들이 오는거 가능 -->
+    <h2>Definition List(정의목록)</h2>
+    <dl>
+        <dt>definition term</dt>
+        <dt>definition term</dt>
+        <dt>definition term</dt>
+        <dt>definition term</dt>
+        <dd>definition description</dd>
+    </dl>
+    <!-- 여러개의 <dt>태그와 한개의 <dd> 태그는 잘못 된 코드 -->
+    <hr>
+    <h2>서브메뉴</h2>
+    <ul>
+        <li>여성의류</li>
+            <ul>
+                <li>상의</li>
+                <li>하의</li>
+                <li>원피스</li>
+                <li>슈즈</li>
+            </ul>
+        <li>남성의류</li>
+        <li>키즈</li>
+        <li>악세서리</li>
+    </ul>
+</body>
+</html>
+
+<!-- 빠르게 리스트 생성하는 단축키 : ul>li*4>{리스트 태그 안에 들어갈 요소} 엔터치면 빠르게 리스트 생성 가능 li*숫자 부분은 몇개의 리스트를 추가할건지 갯수 넣어주면 됨 -->
+<!-- Definition List(정의목록) 사용은 네이버 또는 다음에서 더보기를 열어보면 나오는 부분을 생각하면 된다 또는 카테고리(카테고리 안에 들어가는 내용들) 생각하면 될듯 -->
+<!-- 쇼핑몰, 음료메뉴 등 서브메뉴 형식으로 만들어 준다 -->
