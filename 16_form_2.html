@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form2</title>
+</head>
+<body>
+    <h1>Join form</h1>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>필수 사항</legend>
+            <p>
+                <label for="username">Name:</label>
+                <input type="text" name="username/이름" id="username" required>
+            </p>
+            <p>
+                <label for="useremail">Email:</label>
+                <input type="email" name="useremail/메일" id="useremail" required>
+                
+            </p>
+            <p>
+                <label for="userpw">Password:</label>
+                <input type="password" name="userpw/비밀번호" id="userpw" required>
+            </p>
+            
+        </fieldset>
+        <fieldset>
+            <legend>옵션 사항</legend>
+            <p>
+                <label for="address">주소</label>
+                <select name="address/주소" id="address">
+                    <option value="서울시">서울시</option>
+                    <option value="경기도">경기도</option>
+                    <option value="부산시">부산시</option>
+                    <option value="제주도">제주도</option>
+                </select>
+            </p>
+            <p>
+                <span>성별</span>
+                <label for="male">남성</label>
+                <input type="radio" name="gender" id="male" value="남성">
+                <label for="female">여성</label>
+                <input type="radio" name="gender" id="female" value="여성"> 
+                <!-- name과 value를 지정해 줘서 선택한 사항이 중복선택 되지 않고 데이터 베이스로 전달이 된다. 네임에 들어가는 테이블 칸으로 벨류값이 저장됨 -->
+            </p>
+            <p>
+                <span>관심사항</span>
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="HTML" name="interest" value="HTML">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" id="CSS" name="interest" value="CSS">
+                <label for="JAVASCRIPT">JAVASCRIPT</label>
+                <input type="checkbox" id="JAVASCRIPT" name="interest" value="JAVASCRIPT">
+                <label for="PYTHON">PYTHON</label>
+                <input type="checkbox" id="PYTHON" name="interest" value="PYTHON">
+            </p>
+            <p>
+                <label for="message">인사말</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <!-- textarea는 열림 태그와 닫힘 태그 사이에 공백이 존재하면 안된다. 브라우저에 그 공백이 그대로 표시돼서 커서가 엉뚱한데서 시작한다 -->
+            </p>
+            <p>
+                <label for="profile">이미지 등록</label>
+                <input type="file" id="profile" name="profile">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>HTML5 New Type</legend>
+            <p>
+                <label for="website">웹사이트</label>
+                <input type="url" name="website" id="website" required>
+            </p>
+            <!-- 웹사이트 넣어주기. 
+                type="url" 로 되어있으면 웹사이트 형식을 맞춰서 http:// 또는 https:// 형식으로 넣어주어야 한다 -->
+            <p>
+                <label for="birth">생년월일</label>
+                <input type="date" name="birth" id="birth" required>
+            </p>
+            <p>
+                <label for="langs">학습할 언어 선택</label>
+                <input id="langs" name="langs" list="mylist">
+                <datalist id="mylist">
+                    <option value="html"></option>
+                    <option value="css"></option>
+                    <option value="java script"></option>
+                    <option value="python"></option>
+                </datalist>
+                <!-- list="mylist" 리스트 속성을 주고 datalist 태그에 리스트 속성과 같은 이름의 아이디를 줘서 id="mylist" 데이터를 연결시킨다-->
+            </p>
+            <p>
+                <label for="carrer">경력기간</label>
+                <input type="number" name="carrer" id="carrer" min="0" max="20" step="2">
+            </p>
+            <p>
+                <label for="skills">기술</label>
+                <select name="" id="skills">
+                    <optgroup label="frontend">
+                        <option value="html">html</option>
+                        <option value="css">css</option>
+                        <option value="java script">java script</option>
+                    </optgroup>
+                    <optgroup label="backend">
+                        <option value="python">python</option>
+                        <option value="java">java</option>
+                        <option value="php">php</option>
+                    </optgroup>
+                </select>
+                
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="가입하기">
+        </p>
+    </form>
+    
+    
+    
+</body>
+</html>
+<!-- 사용자 값을 받는 것들을 filed라 하고 이 요소들을 filedset 태그로 묶어준다.
+    legend 필드셋의 이름을 넣어주는 태그. 필드셋은 반드시 이름을 넣어주어야 한다 -->
+<!-- select : 항목 중에 고르는 태그 
+    셀렉트 태그 속성 중 하나인 name은 데이터가 저장되는 테이블 칸의 이름, 임의로 이름생성을 하는게 아닌 데이터베이스를 개발한 개발자가 지정한 이름(데이터가 저장되는 테이블 칸의 이름)을 따른다 -->
+    <!-- 사용자의 입력을 받는 이름 이메일 비밀번호 등은 value 값을 넣지 않는다 -->
