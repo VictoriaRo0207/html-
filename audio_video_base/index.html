@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="robots" content="index, follow">
+    <title>오디오 비디오 구현</title>
+</head>
+
+<body>
+    <h1>멀티미디어</h1>
+    <h2>video</h2>
+    <!-- <video src="video/vivaldi.mp4" controls autoplay muted poster="images/vivaldi.jpg">
+        <span>이 브라우저는 video를 지원하지 않습니다 </span>
+    </video> -->
+    <video controls muted poster="images/vivaldi.jpg">
+        <source src="video/vivaldi.mp4" type="video/mp4" />
+        <source src="video/vivaldi.webm" type="video/webm" />
+        <source src="video/vivaldi.ogg" type="video/ogg" />
+        <span>이 브라우저는 video를 지원하지 않습니다 </span>
+    </video>
+
+
+    <audio controls>
+        <source src="audio/Honey_Bee_01_web.mp3" type="audio/mp3">
+        <source src="audio/Honey_Bee_01_web.ogg" type="audio/ogg">
+        <span>이 브라우저는 mp3를 지원하지 않습니다 </span>
+    </audio>
+    <!-- <audio src="audio/Honey_Bee_01_web.mp3" controls>
+        <span>이 브라우저는 mp3를 지원하지 않습니다 </span>
+    </audio> -->
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8ezvjQOSLVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <iframe src="https://player.vimeo.com/video/783453158?h=bca8b328e2&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/783453158">One More Try (Interactive)</a> from <a href="https://vimeo.com/najeebtarazi">Najeeb Tarazi</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+    <!-- 유튜브 퍼가기와 같이 vimeo 사이트에서도 동영상을 무료로 퍼올 수 있다(갯수 제한 있음) -->
+
+
+</body>
+
+</html>
+<!-- controls : 비디오 제어 동작 기능 (재생, 멈춤, 소리 기타 등등)
+    autoplay : 브라우저 실행 시 자동재생
+    muted : 음소거
+    poster="images/vivaldi.jpg : 비디오 썸네일 같은 기능 오토플레이와 같이 사용할 수 없다-->
+    <!-- ogg 또한 mp3와 같이 사운드 파일 포맷으로 mp3와 ogg 두가지를 넣어주므로써 mp3가 실행되지 않는 브라우저에서 대체로 사용할 수 있다 
+        둘다 지원하지 않는 브라우저일 경우 스펜 태그 문구로 대체됨  -->
+<!-- 파일 업로드 보다 절대경로로 다른 사이트에서 영상을 퍼오는게 트래픽 용량 잡아먹는 부분을 해결할 수 있다 -->
