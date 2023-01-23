@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <h1>Join form</h1>
+    <form action="#" method="POST">
+        <p>
+            <label for="username">Name:</label>
+            <input type="text" id="username" required>
+            <!-- required 를 입력하면 인풋창이 비어있을때 전송 버튼을 눌러도 전송이 되지 않고 입력란을 입력하세요 라는 validation 메세지가 뜬다 -->
+        </p>
+        <p>
+            <label for="useremail">Email:</label>
+            <input type="email" id="useremail" required>
+            <!-- type="email" 을 써주면 사용자가 이메일 양식에 맞지 않게 입력할 시 데이터가 전송되지 않고 양식에 맞게 입력해 달라는 validation 메세지가 뜬다 -->
+        </p>
+        <p>
+            <label for="userpw">Password:</label>
+            <input type="password" id="userpw" required>
+        </p>
+        <p>
+            <!-- 가입하기 버튼생성 방법 인풋을 사용하는 방법도 있고 버튼 태그를 사용할 수도 있다 -->
+            <!--인풋으로 가입버튼 만들기 
+                <input type="submit" value="가입하기"> -->
+            <input type="image" src="images/iconfinder_tick_red_619540.png" alt="가입하기">
+            <!--버튼태그로 가입버튼 만들기 
+                <button>가입하기 기본값이 서브밋이므로 타입 생략 가능</button> -->
+            <!--버튼 태그에 이미지를 넣어 가입버튼 만들기  
+                <button>
+                <img src="images/iconfinder_tick_red_619540.png" alt="가입하기">
+            </button> -->
+            <!-- 버튼 이미지와 인풋 이미지 차이 : 버튼 태그는 배경과 테두리 속성이 자동으로 들어간다 인풋은 이미지 그대로 들어감  -->
+
+        </p>
+
+    </form>
+    
+    
+    
+</body>
+</html>
+<!-- form tag : 사용자의 입력을 받아서 회원가입을 하거나 검색을 할때 많이 활용된다. 텍스트 또는 메뉴 또는 두,세개 중 고르는 등 사용자가 입력하고 선택하는 값들을 서버로 입력해서 회원가입, 검색, 상품등록 등 다양한 웹의 프로세스들이 작동하는 것을 폼이라고 생각하면 된다-->
+<!-- 사용자가 입력한 값들이 실제로 작동하기 위해서는 내용들이 폼태그 안에 있어야 한다 -->
+<!-- action : 사용자가 입력한 값(폼 데이터)가 전송되는 백엔드 url을 지정합니다.
+method : 사용자가 입력한 내용을 어떤 속성값(get/post)으로 넘길 것인지를 지정하는 역할 
+get : 데이터를 주소표시줄 ? 로 넘김, 겟 방식은 검색창 이런데 사용됨
+post : 비번, 이메일 등 내용이 표시되면 안돼는 보안이 필요한 개인정보 등에 사용, 포스트는 겟보다 더 많은 데이터를 넘길 수 있다  -->
